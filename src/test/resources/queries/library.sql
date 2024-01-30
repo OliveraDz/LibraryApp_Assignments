@@ -34,3 +34,9 @@ SELECT * FROM books;
             inner join books b on bb.book_id = b.id
             inner join book_categories bc on b.book_category_id = bc.id;
 -- .....
+
+-- US 04
+    select b.name as bookName,isbn,author,year,b.description,bc.name as bookCategory
+    from books b
+            inner join book_categories bc on b.book_category_id=bc.id
+    where b.name='Clean Code';
