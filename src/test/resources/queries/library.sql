@@ -10,6 +10,13 @@ SELECT * FROM books;
     select count(id) from users; -- 5277          --> ACTUAL
     select count(distinct id) from users; -- 5277 --> EXPECTED
 
+-- US 01 -2
+    select * from users;
+
+    -- OPT 2
+    select COLUMN_NAME
+    from information_schema.columns
+    where TABLE_NAME='users';
 
 
 -- .....
