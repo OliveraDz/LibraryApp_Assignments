@@ -18,5 +18,12 @@ SELECT * FROM books;
     from information_schema.columns
     where TABLE_NAME='users';
 
+-- US 02
+    select count(*) from book_borrow
+    where is_returned=0;
+    -- 0 -> Book in user
+    -- 1 -> Book in library
+
+
 
 -- .....
