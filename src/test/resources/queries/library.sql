@@ -24,6 +24,13 @@ SELECT * FROM books;
     -- 0 -> Book in user
     -- 1 -> Book in library
 
+-- US 03
+    select name from book_categories;
 
-
+    -- Join 4 table to see same data from UI
+        select isbn,b.name,author,bc.name,year,full_name
+        from users u
+            inner join book_borrow bb on u.id=bb.user_id
+            inner join books b on bb.book_id = b.id
+            inner join book_categories bc on b.book_category_id = bc.id;
 -- .....
