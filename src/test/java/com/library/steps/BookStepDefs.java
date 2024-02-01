@@ -88,8 +88,8 @@ public class BookStepDefs {
 
         // GET DATA FROM DB
         String query="select b.name as bookName,isbn,author,year,b.description as des,bc.name as bookCategory\n" +
-                "    from books inner join book_categories bc on b.book_category_id=bc.id " +
-                "where b.name='"+globalBookName+"'";
+                "    from books b inner join book_categories bc on b.book_category_id=bc.id " +
+                "where b.name = '"+globalBookName+"'";
 
         DB_Util.runQuery(query);
 
