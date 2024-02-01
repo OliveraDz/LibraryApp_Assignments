@@ -113,11 +113,14 @@ public class BookStepDefs {
         System.out.println(expectedCategory);
 
 
-        System.out.println("NOT IMPL YET ");
-
         // COMPARE
 
-
+        Assert.assertEquals(expectedBookName,actualBookName);
+        Assert.assertEquals(expectedAuthor,actualAuthor);
+        Assert.assertEquals(expectedCategory,actualCategory);
+        Assert.assertEquals(expectedDesc,actualDesc);
+        Assert.assertEquals(expectedYear,actualYear);
+        Assert.assertEquals(expectedISBN,actualISBN);
 
 
     }
